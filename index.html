@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cadastro</title>
+  <style>
+    /* Estilos CSS */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cadastro</h1>
+  <form id="cadastroForm">
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+    </div>
+
+    <div class="form-group">
+      <label for="instituicao">Instituição de Ensino:</label>
+      <input type="text" id="instituicao" name="instituicao" required>
+    </div>
+
+    <div class="form-group">
+      <label for="pais">País:</label>
+      <input type="text" id="pais" name="pais" required>
+    </div>
+
+    <div class="form-group">
+      <label for="cidade">Cidade:</label>
+      <input type="text" id="cidade" name="cidade" required>
+    </div>
+
+    <div class="form-group">
+      <label for="endereco">Endereço:</label>
+      <input type="text" id="endereco" name="endereco" required>
+    </div>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+    // JavaScript para tratar o envio do formulário
+    document.getElementById("cadastroForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Evita o envio do formulário
+
+      // Obtém os valores dos campos
+      var nome = document.getElementById("nome").value;
+      var instituicao = document.getElementById("instituicao").value;
+      var pais = document.getElementById("pais").value;
+      var cidade = document.getElementById("cidade").value;
+      var endereco = document.getElementById("endereco").value;
+
+      // Aqui você pode fazer algo com os valores, como enviá-los para um servidor
+
+      // Exemplo de exibição dos valores na página
+      var resultado = "Nome: " + nome + "<br>";
+      resultado += "Instituição de Ensino: " + instituicao + "<br>";
+      resultado += "País: " + pais + "<br>";
+      resultado += "Cidade: " + cidade + "<br>";
+      resultado += "Endereço: " + endereco;
+
+      document.body.innerHTML = "<h1>Dados Enviados:</h1>" + resultado;
+    });
+  </script>
+</body>
+</html>
