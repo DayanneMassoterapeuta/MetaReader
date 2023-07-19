@@ -1,0 +1,2 @@
+# MetaReader
+ Analytical Linguistics Software
